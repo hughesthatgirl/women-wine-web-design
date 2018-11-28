@@ -57,12 +57,9 @@ div {
 -----------------------------------------------------------
 */
 
-section + section {
-    margin-top: 20px;
-}
-
 section {
-    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 section div {
@@ -157,4 +154,34 @@ nav a + a {
     font-size: 40px;
     color: white;
     margin-bottom: 40px;
+}
+
+
+/*
+-----------------------------------------------------------
+    DESKTOP STYLES
+-----------------------------------------------------------
+*/
+
+@media only screen and (min-width: 1024px) {
+    section {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    section div {
+        padding-left: 40px;
+        padding-right: 40px;
+        flex-basis: 100%;
+    }
+    
+    .icon-section div {
+        flex-basis: 33.33%;
+    }
+    
+    .contact-section div {
+        flex-basis: 50%;
+    }
 }
