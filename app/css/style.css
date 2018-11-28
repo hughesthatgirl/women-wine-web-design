@@ -119,7 +119,12 @@ p {
 }
 
 a {
+    color: red;
     font-family: 'Bree Serif', serif;
+}
+
+a:visited {
+    color: blue;
 }
 
 a:hover {
@@ -130,6 +135,26 @@ a:active {
     border: 2px dashed black;
 }
 
-a + a {
+nav a {
+    color: white;
+}
+
+nav a + a {
     margin-left: 20px;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+}
+
+.icon-section {
+    background-color: lightgray;
+}
+
+.logo {
+    font-family: 'Bree Serif', serif;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 40px;
 }
