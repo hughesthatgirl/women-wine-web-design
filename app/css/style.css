@@ -24,3 +24,112 @@ body * {box-sizing: border-box;}
 blockquote, q {quotes: none;}
 blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
 table {border-collapse: collapse;border-spacing: 0;}
+ul, ol {list-style: inside;}
+a {display: inline-block}
+
+
+/*
+header,
+footer {
+    border: 2px solid gray;
+}
+
+nav {
+    border: 3px solid yellow;
+}
+
+main {
+    border: 2px solid red;
+}
+
+section {
+    border: 5px solid blue;
+}
+
+div {
+    border: 3px solid orange;
+}
+*/
+
+/*
+-----------------------------------------------------------
+    OUR STYLES BEGIN HERE
+-----------------------------------------------------------
+*/
+
+section + section {
+    margin-top: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+section div {
+    padding: 20px;
+}
+
+header,
+footer {
+    background-color: gray;
+    padding: 40px;
+}
+
+div > * + * {
+    margin-top: 15px;
+}
+
+header,
+main,
+footer {
+    text-align: center;
+}
+
+li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+
+li + li {
+    margin-top: 15px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Bree Serif', serif;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    font-family: 'Bree Serif', serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    border: 2px dashed black;
+}
+
+a + a {
+    margin-left: 20px;
+}
