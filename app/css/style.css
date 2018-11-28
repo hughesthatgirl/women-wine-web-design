@@ -164,6 +164,10 @@ nav a + a {
 */
 
 @media only screen and (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     section {
         display: flex;
         flex-flow: wrap;
