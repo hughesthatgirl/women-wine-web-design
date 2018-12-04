@@ -33,20 +33,25 @@ nav {display: flex; flex-flow: row wrap; justify-content: center; align-items: c
 @media only screen and (min-width: 1024px) { nav{max-width: 600px; margin-left: auto; margin-right: auto;}}
 nav a {min-width: 200px; display: flex; align-items: center; justify-content: center; flex-basis: 0; flex-grow: 1; padding: 10px;}
 
-#transaction {text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;}
-#transaction > * {display:block;}
-#transaction > * + * {margin-top: 20px;}
-#transaction > label + * {margin-top: 10px;}
-#transaction label, #transaction button {font-family: 'Open Sans', sans-serif; font-size: 15px;}
-#transaction input, #transaction button, #transaction select {width: 100%;}
-#transaction input, #transaction button {border-radius: 5px; border: 1px solid gray;}
-#transaction input {height: 30px;}
-#transaction button {padding: 15px 30px; word-wrap: break-word; background-color: lightgray; text-transform: uppercase; font-weight: 700; color: black;cursor: pointer;transition: all 0.3s ease-in;}
-#transaction button:hover {background-color: gray; color: white;}
+form {text-align: left; width:100%; max-width: 600px; margin-left: auto; margin-right: auto;}
+form > * {display:block;}
+form > * + * {margin-top: 20px;}
+form > label + * {margin-top: 10px;}
+form label, form button {font-family: 'Open Sans', sans-serif; font-size: 15px;}
+form input, form button, form select {width: 100%;}
+form input, form button {border-radius: 5px; border: 1px solid gray;}
+form input {height: 30px;}
+form button {padding: 15px 30px; word-wrap: break-word; background-color: lightgray; text-transform: uppercase; font-weight: 700; color: black;cursor: pointer;transition: all 0.3s ease-in;}
+form button:hover {background-color: gray; color: white;}
+
+#form{padding-left: 20px; padding-right: 20px;}
 
 #list{text-align: center; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto;}
 #list th {font-family: 'Bree Serif', serif; padding: 5px; width: 33.333%}
 #list + *{max-width: 600px; margin-left: auto; margin-right:auto; background-color: lightgray; font-weight: 700;}
+
+#confirmation{flex-direction: column;}
+#confirmation > * + *{margin-top: 20px;}
 
 .green {color: green}
 .red {color: red}
