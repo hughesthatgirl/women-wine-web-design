@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Send Money</title>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">Send Money</div>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="account.html">Account Information</a>
+        <a href="send.html">Send Money</a>
+      </nav>
+    </header>
+    
+    <main>
+      <!-- SEND MONEY FORM -->
+      <section id="form">
+        <form id="send-money">
+          <!-- Who are we sending money to? -->
+          <label for="send-to">Send Money To:</label>
+          <select id="send-to">
+            <option value="Mom">Mom</option>
+            <option value="Bestie">Bestie</option>
+            <option value="Sister">Sister</option>
+          </select>
+          <!-- How much money are we sending? -->
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" required />
+          <!-- Submit the form -->
+          <button type="submit">Send Money</button>
+        </form>
+      </section>
+      
+      <!-- CONFIRMATION BANNER -->
+      <section id="confirmation" style="display: none">
+        <h2>Congratulations!</h2>
+        <p>You just sent <strong><span id="display-to">Someone</span></strong> $<span id="display-amount">Something</span></p>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy;2018 Your Name Here | Women Wine &amp; More Web Design</p>
+    </footer>
+    
+    <!-- 
+    TODO: Have attendee's add 1-2 more fields in the form, then grab the values from those and display them on the confirmation banner or somewhere else on the page.  
+
+    Focus on using Javascript to select elements by Id and utilize form elements "value" in other areas of the page.
+
+    Reminder to use "for" in labels to associate to the input - discuss reasoning why. Single ID's per page - cannot have two named the same.
+
+    Discussion: Where else could this be useful?
+    -->
+    
+    <script type="text/javascript">
+      /* ==========================================================
+      Any variables set outside of everything are known as "global" variables and can be accessed from any function within this <script> tag.
+      ========================================================== */
+      var form = document.getElementById("send-money");
+      var banner = document.getElementById("confirmation");
+      
+      /* ==========================================================
+      New Function Type: "Event Listeners"
+      These functions are waiting for something to happen. For our page, we are waiting for someone to submit the form on the page. When they do we will call the code block.
+      ========================================================== */
+      form.addEventListener("submit", function(e){
+        // Stop form from doing whatever it wants!
+        e.preventDefault();
+        
+        // Grab current input values
+        var sendTo = document.getElementById("send-to").value;
+        var amount = document.getElementById("amount").value;
+        
+        // Fill in the blanks with current input values
+        document.getElementById("display-to").innerHTML = sendTo;
+        document.getElementById("display-amount").innerHTML = amount;
+        
+        // Reset the current form so we can do it again
+        form.reset();
+        
+        // Display the banner
+        banner.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
